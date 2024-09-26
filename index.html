@@ -46,6 +46,7 @@
     button.onclick = function(event) {
         const dfMessenger = document.querySelector('df-messenger');
         dfMessenger.startNewSession({ retainHistory: false });
+        dfMessenger.sendRequest('query', 'Hi');
     }
 </script>
 </html>
