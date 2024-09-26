@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexasync Customer Support Chatbot</title>
+</head>
+<body>
+    <div style="width: 80%;display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <p style="font-size: 36px; font-weight: 700;">Hexasync Customer Support Chatbot</p>
+        <button id="clickme" style="width: 200px; height: 50px;">New chat</button>
+    </div>
+    <div>
+        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+        <df-messenger
+        location="asia-southeast1"
+        project-id="dungtest-434703"
+        agent-id="c5d580c2-9710-410a-ad74-31b512ab5998"
+        language-code="en"
+        max-query-length="-1">
+        <df-messenger-chat
+        chat-title="HexaSyncBot">
+        </df-messenger-chat>
+        </df-messenger>
+        <style>
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            width: 350px;
+        }
+        </style>
+    </div>
+</body>
+
+<script>
+    const button = document.getElementById("clickme");
+    button.onclick = function(event) {
+        const dfMessenger = document.querySelector('df-messenger');
+        dfMessenger.startNewSession({ retainHistory: false });
+    }
+</script>
+</html>
