@@ -4,56 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HexaSync Customer Support Chatbot</title>
-    <script>
+    <!-- <script>
         window.onload = function() {
             const dfMessenger = document.querySelector('df-messenger');
             dfMessenger.startNewSession({ retainHistory: false });
             dfMessenger.sendRequest('query', 'Hi');
         }
-    </script>
+    </script> -->
 </head>
 <body>
-    <div style="width: 80%;display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="width: 100%;display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <p style="font-size: 36px; font-weight: 700;">HexaSync Customer Support Chatbot</p>
-        <button id="clickme" style="width: 200px; height: 50px;">New chat</button>
+        <!-- <button id="clickme" style="width: 200px; height: 50px;">New chat</button> -->
     </div>
     <div>
-        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-        <df-messenger
-        location="asia-southeast1"
-        project-id="summer-scion-436808-f5"
-        agent-id="69625923-37a9-4e0c-ad88-40a4781a6c6a"
-        language-code="en"
-        max-query-length="-1">
-        <df-messenger-chat
-        chat-title="beehexabot">
-        </df-messenger-chat>
-        </df-messenger>
-        <style>
-        df-messenger {
-            z-index: 999;
-            position: fixed;
-            --df-messenger-font-color: #000;
-            --df-messenger-font-family: Google Sans;
-            --df-messenger-chat-background: #f3f6fc;
-            --df-messenger-message-user-background: #d3e3fd;
-            --df-messenger-message-bot-background: #fff;
-            bottom: 0;
-            right: 0;
-            top: 0;
-            width: 350px;
-        }
-        </style>
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47443309.js"></script>
+        <!-- End of HubSpot Embed Code -->
     </div>
 </body>
 
-<script>
+<!-- <script>
     const button = document.getElementById("clickme");
     button.onclick = function(event) {
         const dfMessenger = document.querySelector('df-messenger');
         dfMessenger.startNewSession({ retainHistory: false });
         dfMessenger.sendRequest('query', 'Hi');
     }
-</script>
+</script> -->
 </html>
