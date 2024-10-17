@@ -15,7 +15,7 @@
 <body>
     <div style="width: 100%;display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <p style="font-size: 36px; font-weight: 700;">HexaSync Customer Support Chatbot</p>
-        <!-- <button id="clickme" style="width: 200px; height: 50px;">New chat</button> -->
+        <button id="clickme" style="width: 200px; height: 50px;">New chat</button>
     </div>
     <div>
         <!-- Start of HubSpot Embed Code -->
@@ -24,12 +24,16 @@
     </div>
 </body>
 
-<!-- <script>
+<script>
     const button = document.getElementById("clickme");
     button.onclick = function(event) {
-        const dfMessenger = document.querySelector('df-messenger');
-        dfMessenger.startNewSession({ retainHistory: false });
-        dfMessenger.sendRequest('query', 'Hi');
+        document.cookie.split(';').forEach(cookie => {
+            const eqPos = cookie.indexOf('=');
+            const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        });
+
+        location.reload();
     }
-</script> -->
+</script>
 </html>
